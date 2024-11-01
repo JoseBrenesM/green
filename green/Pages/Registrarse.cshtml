@@ -1,0 +1,116 @@
+﻿@page
+@model green.Pages.RegistrarseModel
+@{
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<main class="mt-5">
+    <div class="container" style="background-color:transparent">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <!-- Form Container with shadow and padding -->
+                <div class=" rounded" style="background-color:transparent">
+                    <h2 class="text-center mb-4" style="color:#868D46; font-weight:bold" >Registro de Usuario</h2>
+                    <form method="post" style="background-color:transparent">
+                        <fieldset style="color:white; font-weight:bold">
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">Nombre</label>
+                                <input type="text"  id="Nombre" class="form-control">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Apellidos</label>
+                                <input type="text" id="Apellido" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Direccion" class="form-label">Edad</label>
+                                <input type=""text"  id="Direccion" class="form-control" ></input>
+                            </div>
+                            <div class="mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="Telefono" class="form-label">Teléfono</label>
+                                        <input type="text" id="Telefono" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Direccion" class="form-label">
+                                    Detalles
+                                    <span data-bs-toggle="tooltip" data-bs-placement="right" title="Por favor coméntanos cualquier discapacidad, limitación o preferencia que debamos tomar en cuenta para elegir los destinos y actividades más adecuadas para ti" style="cursor: pointer;">
+                                        &#x2753;
+                                    </span>
+                                </label>
+                                <textarea id="Direccion" class="form-control" rows="5"></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="zonaInteres" class="form-label" style="color:white">¿En cuál zona del país está interesado?</label>
+                                <select id="zonaInteres" class="form-select" aria-label="Seleccionar zona de interés">
+                                    <option selected disabled>Selecciona una zona</option>
+                                    <option value="caribe">Caribe</option>
+                                    <option value="golfito-jimenez">Golfito Jiménez</option>
+                                    <option value="guanacaste-norte">Guanacaste Norte</option>
+                                    <option value="guanacaste-sur">Guanacaste Sur</option>
+                                    <option value="monteverde">Monteverde</option>
+                                    <option value="llanuras-norte">Llanuras del Norte</option>
+                                    <option value="los-santos">Los Santos</option>
+                                    <option value="osa">Osa</option>
+                                    <option value="pacifico-sur">Pacífico Sur</option>
+                                    <option value="puntarenas">Puntarenas</option>
+                                    <option value="sarapiqui">Sarapiquí</option>
+                                    <option value="turrialba">Turrialba</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="TipoPresupuesto" class="form-label">Tipo presupuesto</label>
+                                <input type="text" id="TipoPresupuesto" class="form-control" placeholder="Bajo-Medio-Alto">
+                            </div>
+                            <div class="mb-3">
+                                <label for="TipoPresupuesto" class="form-label">Actividades de Preferencia</label>
+                                <input type="text" id="TipoPresupuesto" class="form-control" placeholder="Playa, senderismo, cataratas, museos, parques nacionales, etc">
+                            </div>
+                            <div class="mb-3">
+                                <label for="TipoPresupuesto" class="form-label">Preferencia Transporte</label>
+                                <input type="text" id="TipoPresupuesto" class="form-control" placeholder="Segun su presupuesto y preferencia, Ej: Auto Privado-Bus-Buseta-Bicicleta-Moto-Otro">
+                            </div>
+                            <div class="mb-3">
+                                <label for="TipoPresupuesto" class="form-label">Tiempo que desea viajar</label>
+                                <input type="text" id="TipoPresupuesto" class="form-control" placeholder="Digite la cantidad mas el valor, ej: 10 Dias">
+                            </div>
+                            <div class="mb-3">
+                                <label for="TipoPresupuesto" class="form-label">Preferencias de idiomas</label>
+                                <input type="text" id="TipoPresupuesto" class="form-control" placeholder="Español-Ingles-etc">
+                            </div>
+                            
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" id="Correo" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" id="Password" class="form-control">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                                <input type="password"  id="ConfirmPassword" class="form-control">
+                            </div>
+                            <a href="/Login" value="Registrarse" class="btn btn-primary" style="background-color: #868D46; border-color:white">Registrarse</a>
+                            <p class="form-footer">¿Ya tienes una cuenta? <a asp-page="../Index">Inicia Sesión</a></p>
+                            <a asp-page="../Index" class="btn btn-secondary">Volver</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+</script>

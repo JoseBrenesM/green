@@ -1,0 +1,39 @@
+﻿body {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(36,64,1,1) 52%, rgba(134,141,70,1) 100%);
+}
+h2 {
+    color:white
+}
+p {
+    color:white
+}
+.display-3 fw-bolder {
+    color:white
+}
+.flex-grow-1 {
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    font-family: 'Sans Serif Collection';
+    font-size: 20px;
+}
+.dropdown {
+    font-size: 20px;
+}
+nav {
+    background-color: transparent;
+}
+a {
+    text-align: center;
+    color: white
+}
+nav-item {
+    font-family: 'Neo Sans';
+       
+}
+.nav-item:hover {
+    text-decoration: underline #ffffff;
+
+}
